@@ -9,17 +9,22 @@ body {
 }
 
 header {
-	font-size: 40px;
+	/*font-size: 100px;
 	font-weight: bold;
 	color: #D3BF94;
-	text-transform: uppercase;
+	text-transform: uppercase;*/
 	margin: 40px auto;
 	width: 80%;
 	height: 75px;
 	background-color: #2A1D15;
 	text-align: center;
-/*	border-radius: 5px;
-*/	padding: 15px;
+}
+
+h1 {
+	font-size: 90px;
+	font-weight: bold;
+	color: #D3BF94;
+	text-transform: uppercase;
 }
 
 .container {
@@ -31,18 +36,16 @@ header {
 
 #questionAnswerBox {
 	float: left;
-/*	display: none;
-*/}
+}
 
 .questionBox {
 	background-color: #1E1713;
 	color: #D3BF94;
 	line-height: 25px;
 	margin: 5px auto;
-/*	border-radius: 5px;
-*/	width: 300px;
-	height: 100px;
-	padding: 30px 10px;
+	width: 300px;
+/*	height: 100px;
+*/	padding: 30px 10px;
 }
 
 .answerBox {
@@ -51,8 +54,7 @@ header {
 	width: 300px;
 /*	height: 50px;
 */	margin: 2px auto;
-/*	border-radius: 5px;
-*/	padding: 16px 10px;
+	padding: 16px 10px;
 }
 
 .answerBox:hover {
@@ -95,8 +97,7 @@ header {
 	width: 200px;
 	height: 100px;
 	margin: 0 auto;
-/*	border-radius: 5px;
-*/	padding: 20px;
+	padding: 20px;
 	color: #fff;
 }
 
@@ -104,10 +105,9 @@ header {
 	background-color: #1e1d13;
 	background-color: rgba(54, 86, 83, 1);
 	width: 200px;
-	height: 100px;
-	margin: 0 auto;
-/*	border-radius: 5px;
-*/	padding: 20px;
+/*	height: 100px;
+*/	margin: 0 auto;
+	padding: 20px;
 	color: #1E1713;
 	font-weight: bold;
 	line-height: 25px;
@@ -117,10 +117,9 @@ header {
 	background-color: #131a1e;
 	background-color: rgba(143, 68, 38, 1);
 	width: 200px;
-	height: 100px;
-	margin: 0 auto;
-/*	border-radius: 5px;
-*/	padding: 20px;
+/*	height: 100px;
+*/	margin: 0 auto;
+	padding: 20px;
 	color: #1E1713;
 	font-weight: bold;
 	line-height: 25px;
@@ -172,8 +171,6 @@ header {
 	width: 200px;
 	margin: 5px auto;
 	color: #D3BF94;
-/*	border-radius: 5px;
-*/
 }
 
 table {
@@ -214,8 +211,7 @@ tr {
 
 #startButton {
 	border: none;
-/*	border-radius: 5px;
-*/	background-color: #805500;
+	background-color: #805500;
 	color: #fff;
 	width: 200px;
 	height: 50px;
@@ -238,8 +234,7 @@ tr {
 
 #resetButton {
 	border: none;
-/*	border-radius: 5px;
-*/	background-color: #9B805A;
+	background-color: #9B805A;
 	color: #1E1713;
 	width: 200px;
 	height: 50px;
