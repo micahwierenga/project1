@@ -1,0 +1,254 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgba(250, 243, 231, 1);
+	background-color: #D3BF94;
+}
+
+header {
+	font-size: 40px;
+	font-weight: bold;
+	color: #D3BF94;
+	text-transform: uppercase;
+	margin: 40px auto;
+	width: 80%;
+	height: 75px;
+	background-color: #2A1D15;
+	text-align: center;
+/*	border-radius: 5px;
+*/	padding: 15px;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*Question and Answers*/
+
+#questionAnswerBox {
+	float: left;
+/*	display: none;
+*/}
+
+.questionBox {
+	background-color: #1E1713;
+	color: #D3BF94;
+	line-height: 25px;
+	margin: 5px auto;
+/*	border-radius: 5px;
+*/	width: 300px;
+	height: 100px;
+	padding: 30px 10px;
+}
+
+.answerBox {
+	background-color: #9B805A;
+	color: #1E1713;
+	width: 300px;
+/*	height: 50px;
+*/	margin: 2px auto;
+/*	border-radius: 5px;
+*/	padding: 16px 10px;
+}
+
+.answerBox:hover {
+	cursor: pointer;
+	background-color: #2A1D15;
+	color: #D3BF94;
+}
+
+#showQuestionAnswerBox {
+	float: left;
+}
+
+.correctAnswer {
+	display: none;
+}
+
+.container2 {
+	width: 80%;
+	margin: 0 auto;
+	clear: both;
+}
+
+#questionAnswerBox-q2 {
+	float: left;
+}
+
+/*Answer Display*/
+
+.answerAndNextQuestion {
+	float: left;
+	width: 200px;
+}
+
+#answerDisplayBox {
+	margin: 5px auto 0 10px;
+	width: 200px;
+}
+
+#answerDisplay {
+	width: 200px;
+	height: 100px;
+	margin: 0 auto;
+/*	border-radius: 5px;
+*/	padding: 20px;
+	color: #fff;
+}
+
+#answerDisplayCorrect {
+	background-color: #1e1d13;
+	background-color: rgba(54, 86, 83, 1);
+	width: 200px;
+	height: 100px;
+	margin: 0 auto;
+/*	border-radius: 5px;
+*/	padding: 20px;
+	color: #1E1713;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+#answerDisplayIncorrect {
+	background-color: #131a1e;
+	background-color: rgba(143, 68, 38, 1);
+	width: 200px;
+	height: 100px;
+	margin: 0 auto;
+/*	border-radius: 5px;
+*/	padding: 20px;
+	color: #1E1713;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+/*Next Question Button*/
+
+#nextQuestionBox {
+	width: 200px;
+	height: 100px;
+	margin: 5px auto 0 10px;
+	text-align: center;
+}
+
+#nextQuestion {
+	/*border: none;
+	border-radius: 5px;
+	background-color: #805500;
+	color: #fff;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;*/
+	display: none;
+}
+
+#show {
+	border: none;
+	background-color: #2A1D15;
+	color: #D3BF94;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#show:hover {
+	background-color: #9B805A;
+	color: #1E1713;
+}
+
+#nextQuestion:hover {
+	background-color: #664400;
+}
+
+/*Scoreboard*/
+
+.scoreboardBox {
+	float: right;
+	width: 200px;
+	margin: 5px auto;
+	color: #D3BF94;
+/*	border-radius: 5px;
+*/
+}
+
+table {
+	margin: 0 auto;
+	width: 200px;
+	height: 100px;
+	background-color: #1E1713;
+	
+}
+
+th {
+	padding: 10px;
+	font-size: 18px;
+}
+
+tr {
+
+}
+
+#player1Score {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player2Score {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/*Start Button*/
+
+.startButtonBox {
+	width: 200px;
+	height: 50px;
+	margin: 110px auto 0;
+	text-align: center;
+}
+
+#startButton {
+	border: none;
+/*	border-radius: 5px;
+*/	background-color: #805500;
+	color: #fff;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#startButton:hover {
+	background-color: #664400;
+}
+
+/*Reset Button*/
+
+.resetButtonBox {
+	width: 200px;
+	height: 50px;
+	margin: 5px auto;
+	text-align: center;
+}
+
+#resetButton {
+	border: none;
+/*	border-radius: 5px;
+*/	background-color: #9B805A;
+	color: #1E1713;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#resetButton:hover {
+	background-color: #2A1D15;
+	color: #D3BF94;
+}
+

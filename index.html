@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<!-- <body onload="startQuiz(q1)"> -->
+<body>
+<header>
+	Trivia
+</header>
+<div class="container">
+	<div id="questionAnswerBox">
+<!-- 		<div class="questionBox" id="question"></div>
+		<div class="answerBox" id="answer1"></div>
+		<div class="answerBox" id="answer2"></div>
+		<div class="answerBox" id="answer3"></div>
+		<div class="answerBox" id="answer4"></div> -->
+	</div>
+
+	<div class="answerAndNextQuestion">
+	<div id="answerDisplayBox">
+		<!-- <div id="answerDisplay">
+		</div> -->
+	</div>
+	<div id="nextQuestionBox">
+<!-- 		<button id="nextQuestion">Next Question</button>
+ --></div>
+	</div>
+
+	<div class="scoreboardBox">
+		<table>
+			<tr>
+				<th class="scoreboardTeams">Player 1</th>
+				<th class="scoreboardTeams">Player 2</th>
+			</tr>
+			<tr>
+				<th id="player1Score"></th>
+				<th id="player2Score"></th>
+			</tr>
+		</table>
+		<div class="startButtonBox">
+			<!-- <button id="startButton">Start Quiz</button> -->
+		</div>
+		<div class="resetButtonBox">
+			<button id="resetButton">Reset Quiz</button>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="container2">
+	<div id="questionAnswerBox-q2">
+		<div class="questionBox" id="question-q2"></div>
+		<div class="answerBox" id="answer1-q2"></div>
+		<div class="answerBox" id="answer2-q2"></div>
+		<div class="answerBox" id="answer3-q2"></div>
+		<div class="answerBox" id="answer4-q2"></div>
+		<div class="correctAnswer" id="correctAnswer-q2"></div>
+	</div>
+</div> -->
+
+<script type="text/javascript">
+	function downloadJSAtOnload() {
+		var element = document.createElement("script");
+		element.src = "js/app1.js";
+		document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+		window.addEventListener("load", downloadJSAtOnload,
+			false);
+	else if (window.attachEvent)
+		window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+</script>
+</body>
+</html>
