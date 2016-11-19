@@ -5,7 +5,9 @@ var questionArray = [];
 
 var counter = 0;
 
-var scoreKeeper = [];
+var scoreKeeperP1 = [];
+
+var scoreKeeperP2 = [];
 
 var playerTurn = 0;
 
@@ -80,7 +82,6 @@ function createQuestion1() {
 	answerBox4.setAttribute("id", "answer4")
 	answerBox4.innerHTML = questionArray[counter].answer4;
 	questionAnswerBox.appendChild(answerBox4);
-	chooseAnswer();
 }
 
 function chooseAnswer() {
@@ -91,6 +92,8 @@ function chooseAnswer() {
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
+		determineWinner1();
+		determineWinner2();
 	});
 	var chooseAnswer2 = document.getElementById("answer2");
 	chooseAnswer2.addEventListener("click", function() {
@@ -99,6 +102,8 @@ function chooseAnswer() {
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
+		determineWinner1();
+		determineWinner2();
 	});
 	var chooseAnswer3 = document.getElementById("answer3");
 	chooseAnswer3.addEventListener("click", function() {
@@ -107,6 +112,8 @@ function chooseAnswer() {
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
+		determineWinner1();
+		determineWinner2();
 	});
 	var chooseAnswer4 = document.getElementById("answer4");
 	chooseAnswer4.addEventListener("click", function() {
@@ -115,6 +122,8 @@ function chooseAnswer() {
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
+		determineWinner1();
+		determineWinner2();
 	});
 };
 
@@ -145,48 +154,48 @@ function displayAnswer() {
 };
 
 function keepScoreP1() {
-	if (selectedAnswer === questionArray[counter].correctAnswer && playerTurn < 9) {
+	if (selectedAnswer === questionArray[counter].correctAnswer && playerTurn < 10) {
 		var addPoint = 1;
-		scoreKeeper.push(addPoint);
-		var p1ScoreSum = scoreKeeper.reduce(function add(previous, current) {
+		scoreKeeperP1.push(addPoint);
+		var p1ScoreSum = scoreKeeperP1.reduce(function add(previous, current) {
 			return current + previous;
 		});
 		var p1Scoreboard = document.getElementById("player1Score");
 		p1Scoreboard.textContent = p1ScoreSum;
-	} else if (selectedAnswer !== questionArray[counter].correctAnswer && playerTurn < 9) {
+	} else if (selectedAnswer !== questionArray[counter].correctAnswer && playerTurn < 10) {
 		var noPoint = 0;
-		scoreKeeper.push(noPoint);
-		var p1ScoreSum = scoreKeeper.reduce(function add(previous, current) {
+		scoreKeeperP1.push(noPoint);
+		var p1ScoreSum = scoreKeeperP1.reduce(function add(previous, current) {
 			return current + previous;
 		});
 		var p1Scoreboard = document.getElementById("player1Score");
 		p1Scoreboard.textContent = p1ScoreSum;
 	} else {
-		console.log("what the")
+		console.log("")
 	}
 };
 
 function keepScoreP2() {
-	if (selectedAnswer === questionArray[counter].correctAnswer && playerTurn > 8) {
+	if (selectedAnswer === questionArray[counter].correctAnswer && playerTurn > 9) {
 		console.log("can second player go now?")
 		var addPoint = 1;
-		scoreKeeper.push(addPoint);
-		var p2ScoreSum = scoreKeeper.reduce(function add(previous, current) {
+		scoreKeeperP2.push(addPoint);
+		var p2ScoreSum = scoreKeeperP2.reduce(function add(previous, current) {
 			return current + previous;
 		});
 		var p2Scoreboard = document.getElementById("player2Score");
 		p2Scoreboard.textContent = p2ScoreSum;
-	} else if (selectedAnswer !== questionArray[counter].correctAnswer && playerTurn > 8) {
+	} else if (selectedAnswer !== questionArray[counter].correctAnswer && playerTurn > 9) {
 		console.log("now what about now?")
 		var noPoint = 0;
-		scoreKeeper.push(noPoint);
-		var p2ScoreSum = scoreKeeper.reduce(function add(previous, current) {
+		scoreKeeperP2.push(noPoint);
+		var p2ScoreSum = scoreKeeperP2.reduce(function add(previous, current) {
 			return current + previous;
 		});
 		var p2Scoreboard = document.getElementById("player2Score");
 		p2Scoreboard.textContent = p2ScoreSum;
 	} else {
-		
+		console.log("")
 	}
 };
 
@@ -231,13 +240,12 @@ function nextQuestion() {
 
 function switchPlayers() {
 	if (playerTurn === 9) {
-		console.log("switch?");
 		counter = 0;
+		playerTurn += 1;
 		questionAnswerBox.innerHTML = "";
 		createQuestion1();
-	} else {
+	} else if (playerTurn !== 9) {
 		playerTurn += 1;
-		console.log("not your turn yet")
 	}
 };
 
@@ -245,9 +253,54 @@ function startGame() {
 	var startButton = document.getElementById("startButton");
 	startButton.addEventListener("click", function() {
 		createQuestion1();
+		chooseAnswer();
 	});
 };
 startGame();
+
+function determineWinner1() {
+	var p1ScoreSum = scoreKeeperP1.reduce(function add(previous, current) {
+			return current + previous;
+		});
+	var p2ScoreSum = scoreKeeperP2.reduce(function add(previous, current) {
+			return current + previous;
+		});
+	if (playerTurn === 19 && p1ScoreSum > p2ScoreSum) {
+		var scoreboardHeader = document.getElementById("player1ScoreHeader");
+		var scoreboard = document.getElementById("player1Score");
+		var winner = document.getElementById("winner");
+		scoreboardHeader.setAttribute("id", "player1ScoreHeaderWinner");
+		scoreboard.setAttribute("id", "player1ScoreWinner");
+		winner.setAttribute("id", "showWinner");
+		winner.textContent = "Player 1 Wins!";
+	} else if (playerTurn === 19 && p1ScoreSum === p2ScoreSum){
+		var winner = document.getElementById("winner");
+		winner.setAttribute("id", "showWinner");
+		winner.textContent = "It's a tie!";
+	} else {
+		console.log("")
+	}
+};
+
+function determineWinner2() {
+	var p1ScoreSum = scoreKeeperP1.reduce(function add(previous, current) {
+			return current + previous;
+		});
+	var p2ScoreSum = scoreKeeperP2.reduce(function add(previous, current) {
+			return current + previous;
+		});
+	if (playerTurn === 19 && p2ScoreSum > p1ScoreSum) {
+		var scoreboardHeader = document.getElementById("player2ScoreHeader");
+		var scoreboard = document.getElementById("player2Score");
+		var winner = document.getElementById("winner");
+		scoreboardHeader.setAttribute("id", "player2ScoreHeaderWinner");
+		scoreboard.setAttribute("id", "player2ScoreWinner");
+		winner.setAttribute("id", "showWinner");
+		winner.textContent = "Player 2 Wins!";
+	} else {
+		console.log("did this work?")
+	}
+}
 
 
 

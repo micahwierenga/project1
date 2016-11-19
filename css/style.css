@@ -105,8 +105,7 @@ h1 {
 	background-color: #1e1d13;
 	background-color: rgba(54, 86, 83, 1);
 	width: 200px;
-/*	height: 100px;
-*/	margin: 0 auto;
+	margin: 0 auto;
 	padding: 20px;
 	color: #1E1713;
 	font-weight: bold;
@@ -117,8 +116,7 @@ h1 {
 	background-color: #131a1e;
 	background-color: rgba(143, 68, 38, 1);
 	width: 200px;
-/*	height: 100px;
-*/	margin: 0 auto;
+	margin: 0 auto;
 	padding: 20px;
 	color: #1E1713;
 	font-weight: bold;
@@ -135,13 +133,6 @@ h1 {
 }
 
 #nextQuestion {
-	/*border: none;
-	border-radius: 5px;
-	background-color: #805500;
-	color: #fff;
-	width: 200px;
-	height: 50px;
-	font-size: 14px;*/
 	display: none;
 }
 
@@ -195,24 +186,76 @@ tr {
 	font-weight: bold;
 }
 
+#player1ScoreHeaderWinner {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, 1);
+	color: #1E1713;
+	color: #D3BF94;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player1ScoreWinner {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, 1);
+	color: #1E1713;
+	color: #D3BF94;
+	font-size: 30px;
+	font-weight: bold;
+}
+
 #player2Score {
 	font-size: 30px;
 	font-weight: bold;
+}
+
+#player2ScoreHeaderWinner {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, 1);
+	color: #1E1713;
+	color: #D3BF94;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player2ScoreWinner {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, 1);
+	color: #1E1713;
+	color: #D3BF94;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.winner {
+
+	height: 40px;
+}
+
+#showWinner {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, 1);
+	color: #1E1713;
+	color: #D3BF94;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
 }
 
 /*Start Button*/
 
 .startButtonBox {
 	width: 200px;
-	height: 50px;
-	margin: 110px auto 0;
+	margin-top: 50px;
 	text-align: center;
 }
 
 #startButton {
 	border: none;
-	background-color: #805500;
-	color: #fff;
+	background-color: #2A1D15;
+	color: #D3BF94;
 	width: 200px;
 	height: 50px;
 	font-size: 14px;
@@ -220,15 +263,15 @@ tr {
 }
 
 #startButton:hover {
-	background-color: #664400;
+	background-color: #9B805A;
+	color: #1E1713;
 }
 
 /*Reset Button*/
 
 .resetButtonBox {
 	width: 200px;
-	height: 50px;
-	margin: 5px auto;
+	margin-top: 2px;
 	text-align: center;
 }
 
@@ -246,4 +289,8 @@ tr {
 	background-color: #2A1D15;
 	color: #D3BF94;
 }
+
+
+
+
 
