@@ -89,41 +89,49 @@ function chooseAnswer() {
 	chooseAnswer1.addEventListener("click", function() {
 		selectedAnswer = chooseAnswer1.textContent;
 		displayAnswer();
+		unclickable();
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		
 	});
 	var chooseAnswer2 = document.getElementById("answer2");
 	chooseAnswer2.addEventListener("click", function() {
 		selectedAnswer = chooseAnswer2.textContent;
 		displayAnswer();
+		unclickable();
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		
 	});
 	var chooseAnswer3 = document.getElementById("answer3");
 	chooseAnswer3.addEventListener("click", function() {
 		selectedAnswer = chooseAnswer3.textContent;
 		displayAnswer();
+		unclickable();
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		
 	});
 	var chooseAnswer4 = document.getElementById("answer4");
 	chooseAnswer4.addEventListener("click", function() {
 		selectedAnswer = chooseAnswer4.textContent;
 		displayAnswer();
+		unclickable();
 		keepScoreP1();
 		keepScoreP2();
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		
 	});
 };
 
@@ -252,8 +260,10 @@ function switchPlayers() {
 function startGame() {
 	var startButton = document.getElementById("startButton");
 	startButton.addEventListener("click", function() {
+		questionAnswerBox.innerHTML = "";
 		createQuestion1();
 		chooseAnswer();
+		unclickableStart();
 	});
 };
 startGame();
@@ -273,10 +283,14 @@ function determineWinner1() {
 		scoreboard.setAttribute("id", "player1ScoreWinner");
 		winner.setAttribute("id", "showWinner");
 		winner.textContent = "Player 1 Wins!";
+		var resetButton = document.getElementById("resetButton");
+		resetButton.textContent = "Play Again";
 	} else if (playerTurn === 19 && p1ScoreSum === p2ScoreSum){
 		var winner = document.getElementById("winner");
 		winner.setAttribute("id", "showWinner");
 		winner.textContent = "It's a tie!";
+		var resetButton = document.getElementById("resetButton");
+		resetButton.textContent = "Play Again";
 	} else {
 		console.log("")
 	}
@@ -297,12 +311,59 @@ function determineWinner2() {
 		scoreboard.setAttribute("id", "player2ScoreWinner");
 		winner.setAttribute("id", "showWinner");
 		winner.textContent = "Player 2 Wins!";
+		var resetButton = document.getElementById("resetButton");
+		resetButton.textContent = "Play Again";
 	} else {
 		console.log("did this work?")
 	}
 }
 
+function resetGame() {
+	var resetButton = document.getElementById("resetButton");
+	resetButton.addEventListener("click", function() {
+		location.reload();
+		// questionAnswerBox.innerHTML = "";
+		// var answerDisplayBox = document.getElementById("answerDisplayBox");
+		// answerDisplayBox.innerHTML = "";
+		// var nextQuestionBox = document.getElementById("nextQuestionBox");
+		// nextQuestionBox.innerHTML = "";
+		// var p1Scoreboard = document.getElementById("player1Score");
+		// p1Scoreboard.textContent = "";
+		// var p2Scoreboard = document.getElementById("player2Score");
+		// p2Scoreboard.textContent = "";
+		// var scoreboardHeader1 = document.getElementById("player1ScoreHeaderWinner");
+		// scoreboardHeader1.removeAttribute("id", "player1ScoreHeaderWinner");
+		// var scoreboard1 = document.getElementById("player1ScoreWinner");
+		// scoreboard1.removeAttribute("id", "player1ScoreWinner");
+		// var scoreboardHeader2 = document.getElementById("player2ScoreHeaderWinner");
+		// scoreboardHeader2.removeAttribute("id", "player2ScoreHeaderWinner");
+		// var scoreboard2 = document.getElementById("player2ScoreWinner");
+		// scoreboard2.removeAttribute("id", "player2ScoreWinner");
+		// var winner = document.getElementById("showWinner");
+		// winner.textContent = "";
+		// playerTurn = 0;
+		// counter = 0;
+		// scoreKeeperP1.length = 0;
+		// scoreKeeperP2.length = 0;
+	});
+};
+resetGame();
 
+function unclickable() {
+	var answerBox1 = document.getElementById("answer1");
+	answerBox1.setAttribute("class", "unclickable");
+	var answerBox2 = document.getElementById("answer2");
+	answerBox2.setAttribute("class", "unclickable");
+	var answerBox3 = document.getElementById("answer3");
+	answerBox3.setAttribute("class", "unclickable");
+	var answerBox4 = document.getElementById("answer4");
+	answerBox4.setAttribute("class", "unclickable");
+}
+
+function unclickableStart() {
+	var startButton = document.getElementById("startButton");
+	startButton.setAttribute("class", "unclickable");
+}
 
 
 
