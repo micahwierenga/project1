@@ -54,9 +54,6 @@ questionArray.push(q9);
 var q10 = new MultipleChoice ("Where was the last place Albert Einstein lived?", "Cambridge, Massachusetts", "Oxford, United Kingdom", "Stuttgart, Germany", "Princeton, New Jersey", "Princeton, New Jersey");
 questionArray.push(q10);
 
-var q10 = new MultipleChoice ("What capital?", "this", "that", "there", "here", "here");
-questionArray.push(q10);
-
 function createQuestion1() {
 	var questionBox = document.createElement("div");
 	questionBox.setAttribute("class", "questionBox");
