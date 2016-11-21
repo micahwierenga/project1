@@ -78,6 +78,15 @@ p {
 	color: #D3BF94;
 }
 
+#turnBox {
+	width: 200px;
+	background-color: #1E1713;
+	color: #D3BF94;
+	margin: 15px auto;
+	padding: 16px 10px;
+	text-align: center;
+}
+
 #showQuestionAnswerBox {
 	float: left;
 }
@@ -178,6 +187,20 @@ th {
 	font-weight: bold;
 }
 
+#player1ScoreTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player1ScoreHeaderTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 #player1ScoreHeaderWinner {
 	background-color: rgba(54, 86, 83, 1);
 	color: #D3BF94;
@@ -197,6 +220,20 @@ th {
 	font-weight: bold;
 }
 
+#player2ScoreTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player2ScoreHeaderTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 #player2ScoreHeaderWinner {
 	background-color: rgba(54, 86, 83, 1);
 	color: #D3BF94;
@@ -213,6 +250,16 @@ th {
 
 .winner {
 	height: 40px;
+}
+
+#playerTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
 }
 
 #showWinner {
@@ -514,6 +561,16 @@ th {
 	#showWinner {
 		background-color: rgba(54, 86, 83, 1);
 		color: #D3BF94;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		padding: 10px;
+	}
+
+	#playerTurn {
+		background-color: #9B805A;
+		color: #1E1713;
 		font-size: 12px;
 		text-transform: uppercase;
 		font-weight: bold;
