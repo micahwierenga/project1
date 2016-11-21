@@ -1,3 +1,4 @@
+// Global Variables
 
 var selectedAnswer = "";
 
@@ -15,6 +16,7 @@ var questionAnswerBox = document.getElementById("questionAnswerBox");
 
 var winner = document.getElementById("winner");
 
+// Object Constructor
 
 function MultipleChoice (question, answer1, answer2, answer3, answer4, correctAnswer, nextQ, categoryId) {
 	this.question = question;
@@ -25,6 +27,8 @@ function MultipleChoice (question, answer1, answer2, answer3, answer4, correctAn
 	this.correctAnswer = correctAnswer;
 	this.nextQ = nextQ;
 }
+
+// List of Trivia Questions (Created with MultipleChoice Constructor)
 
 var q1 = new MultipleChoice ("Ankara is the capital of:", "Cyprus", "Kazakhstan", "Turkey", "Jordan", "Turkey");
 questionArray.push(q1);
@@ -59,6 +63,8 @@ questionArray.push(q10);
 var q10 = new MultipleChoice ("What capital?", "this", "that", "there", "here", "here");
 questionArray.push(q10);
 
+// Creates the First Question at the Beginning of the First and Second Rounds
+
 function createQuestion1() {
 	var questionBox = document.createElement("div");
 	questionBox.setAttribute("class", "questionBox");
@@ -86,6 +92,8 @@ function createQuestion1() {
 	questionAnswerBox.appendChild(answerBox4);
 }
 
+// Function that Allows Player to Choose an Answer
+
 function chooseAnswer() {
 	var chooseAnswer1 = document.getElementById("answer1");
 	chooseAnswer1.addEventListener("click", function() {
@@ -97,7 +105,6 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
-		
 	});
 	var chooseAnswer2 = document.getElementById("answer2");
 	chooseAnswer2.addEventListener("click", function() {
@@ -109,7 +116,6 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
-		
 	});
 	var chooseAnswer3 = document.getElementById("answer3");
 	chooseAnswer3.addEventListener("click", function() {
@@ -121,7 +127,6 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
-		
 	});
 	var chooseAnswer4 = document.getElementById("answer4");
 	chooseAnswer4.addEventListener("click", function() {
@@ -133,9 +138,10 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
-		
 	});
 };
+
+// Function that Displays Whether or Not a Choice is Correct
 
 function displayAnswer() {
 	if (selectedAnswer === questionArray[counter].correctAnswer) {
@@ -164,6 +170,8 @@ function displayAnswer() {
 		turnBox();
 	}
 };
+
+// Tracks Scores for Each Players
 
 function keepScoreP1() {
 	if (selectedAnswer === questionArray[counter].correctAnswer && playerTurn < 10) {
@@ -209,6 +217,8 @@ function keepScoreP2() {
 	}
 };
 
+// Function That Runs When Next Question Button Is Clicked
+
 function nextQuestion() {
 	var nextQuestionButton = document.getElementById("show");
 	nextQuestionButton.addEventListener("click", function() {		
@@ -248,6 +258,8 @@ function nextQuestion() {
 	})
 };
 
+// Tells the Game to Swtich Players
+
 function switchPlayers() {
 	if (playerTurn === 9) {
 		counter = 0;
@@ -258,6 +270,8 @@ function switchPlayers() {
 		playerTurn += 1;
 	}
 };
+
+// Runs When Start Game Button Is Clicked
 
 function startGame() {
 	var startButton = document.getElementById("startButton");
@@ -270,6 +284,8 @@ function startGame() {
 	});
 };
 startGame();
+
+// Indicates Which Player Has Won
 
 function determineWinner1() {
 	var p1ScoreSum = scoreKeeperP1.reduce(function add(previous, current) {
@@ -318,6 +334,8 @@ function determineWinner2() {
 	}
 }
 
+// Resets the Game When the Reset Button Is Clicked
+
 function resetGame() {
 	var resetButton = document.getElementById("resetButton");
 	resetButton.addEventListener("click", function() {
@@ -349,6 +367,8 @@ function resetGame() {
 };
 resetGame();
 
+// Prevents All Answers from Being Clicked After Initial Choice Is Made
+
 function unclickable() {
 	var answerBox1 = document.getElementById("answer1");
 	answerBox1.setAttribute("class", "unclickable");
@@ -360,10 +380,14 @@ function unclickable() {
 	answerBox4.setAttribute("class", "unclickable");
 }
 
+// Prevents Start Button from Being Clicked After Initial Click
+
 function unclickableStart() {
 	var startButton = document.getElementById("startButton");
 	startButton.setAttribute("class", "unclickable");
 }
+
+// Indicates Which Player's Turn It Is
 
 function turnBox() {
 	if (playerTurn < 9) {

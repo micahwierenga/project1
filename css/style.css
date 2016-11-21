@@ -10,16 +10,17 @@ body {
 header {
 	margin: 40px auto;
 	width: 80%;
-	height: 75px;
+	height: 70px;
 	background-color: #2A1D15;
 	text-align: center;
 }
 
 h1 {
-	font-size: 90px;
+	font-size: 110px;
 	font-weight: bold;
 	color: #D3BF94;
 	text-transform: uppercase;
+	line-height: 70px;
 }
 
 .container {
@@ -397,16 +398,17 @@ th {
 	header {
 		margin: 20px auto;
 		width: 90%;
-		height: 35px;
+		height: 30px;
 		background-color: #2A1D15;
 		text-align: center;
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 43px;
 		font-weight: bold;
 		color: #D3BF94;
 		text-transform: uppercase;
+		line-height: 30px;
 	}
 
 	/*Instructions*/
@@ -633,4 +635,21 @@ th {
 		cursor: pointer;
 	}
 
+}
+
+/*Landing Page*/
+
+#landingBody {
+	text-align: center;
+}
+
+#landingButton {
+	border: none;
+	background-color: #2A1D15;
+	color: #D3BF94;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 40%;
 }

@@ -31,4 +31,4 @@ For each correct answer you choose, one point will be awarded. Each Player will 
 
 * Unsolved Problems
 
-I'm happy to report that all obstacles have been overcome.
+I'm happy to report that all obstacles have been overcome . . . so far.

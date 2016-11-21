@@ -1,0 +1,1 @@
+$("#landingBody").click(fadeOut(1000));
