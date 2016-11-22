@@ -68,8 +68,8 @@ p {
 	background-color: #9B805A;
 	color: #1E1713;
 	font-weight: bold;
-	box-shadow: 5px 5px 5px #2A1D15;
-	border: 1px solid #000;
+	box-shadow: 1px 1px 5px #2A1D15;
+	border: 1px solid #2A1D15;
 	text-align: center;
 	padding: 15px;
 	margin: 0 auto;
@@ -81,7 +81,7 @@ p {
 	border: none;
 	background-color: #1E1713;
 	color: #9B805A;
-	font-size: 14px;
+	font-size: 12px;
 	cursor: pointer;
 	margin: 20px auto;
 }
@@ -484,6 +484,16 @@ th {
 	p {
 		font-size: 10px;
 		line-height: 15px;
+	}
+
+	#modal {
+		height: 80px;
+		padding: 10px;
+	}
+
+	#modalButton {
+		width: 50px;
+		margin: 10px auto;
 	}
 
 	/*Questions/Answers*/
