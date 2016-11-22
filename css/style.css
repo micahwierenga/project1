@@ -50,6 +50,47 @@ p {
 	line-height: 20px;
 }
 
+#modalBox {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 200px;
+	z-index: 1;
+}
+
+#modal {
+	height: 100px;
+	width: 30%;
+	background-color: #9B805A;
+	color: #1E1713;
+	font-weight: bold;
+	box-shadow: 5px 5px 5px #2A1D15;
+	border: 1px solid #000;
+	text-align: center;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+#modalButton {
+	width: 100px;
+	height: 25px;
+	border: none;
+	background-color: #1E1713;
+	color: #9B805A;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 20px auto;
+}
+
+#modalButton:hover {
+	background-color: rgba(30, 23, 19, .3);
+	color: #1E1713;
+}
+
 /*Question and Answers*/
 
 #questionAnswerBox {
@@ -387,6 +428,18 @@ th {
 	
 	.questionBox {
 		margin: 0;
+	}
+
+	#modalBox {
+		width: 100%;
+		text-align: center;
+		position: fixed;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top: 200px;
+		z-index: 1;
 	}
 
 }

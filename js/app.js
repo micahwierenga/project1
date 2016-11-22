@@ -105,6 +105,7 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		hideNext();
 	});
 	var chooseAnswer2 = document.getElementById("answer2");
 	chooseAnswer2.addEventListener("click", function() {
@@ -116,6 +117,7 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		hideNext();
 	});
 	var chooseAnswer3 = document.getElementById("answer3");
 	chooseAnswer3.addEventListener("click", function() {
@@ -127,6 +129,7 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		hideNext();
 	});
 	var chooseAnswer4 = document.getElementById("answer4");
 	chooseAnswer4.addEventListener("click", function() {
@@ -138,6 +141,7 @@ function chooseAnswer() {
 		nextQuestion();
 		determineWinner1();
 		determineWinner2();
+		hideNext();
 	});
 };
 
@@ -266,6 +270,7 @@ function switchPlayers() {
 		playerTurn += 1;
 		questionAnswerBox.innerHTML = "";
 		createQuestion1();
+		turn2Indicator();
 	} else if (playerTurn !== 9) {
 		playerTurn += 1;
 	}
@@ -281,6 +286,7 @@ function startGame() {
 		chooseAnswer();
 		unclickableStart();
 		turnBox();
+		turn1Indicator();
 	});
 };
 startGame();
@@ -403,5 +409,44 @@ function turnBox() {
 	}
 };
 
+function hideNext() {
+	if (playerTurn === 19) {
+		var nextQuestionBox = document.getElementById("nextQuestionBox");
+		nextQuestionBox.innerHTML = "";
+	}
+}
 
+function turn1Indicator() {
+	var modal = document.getElementById("modalBox");
+	var modalBox = document.createElement("div");
+	modalBox.setAttribute("id", "modal");
+	var modalPara = document.createElement("p");
+	modalPara.textContent = "Player 1 Begin";
+	modalBox.appendChild(modalPara);
+	var modalButton = document.createElement("button");
+	modalButton.setAttribute("id", "modalButton");
+	modalButton.textContent = "OK";
+	modalButton.onclick = function() {
+		modalBox.style.display = "none";
+	}
+	modalBox.appendChild(modalButton);
+	modal.appendChild(modalBox);
+}
+
+function turn2Indicator() {
+	var modal = document.getElementById("modalBox");
+	var modalBox = document.createElement("div");
+	modalBox.setAttribute("id", "modal");
+	var modalPara = document.createElement("p");
+	modalPara.textContent = "Player 2 Begin";
+	modalBox.appendChild(modalPara);
+	var modalButton = document.createElement("button");
+	modalButton.setAttribute("id", "modalButton");
+	modalButton.textContent = "OK";
+	modalButton.onclick = function() {
+		modalBox.style.display = "none";
+	}
+	modalBox.appendChild(modalButton);
+	modal.appendChild(modalBox);
+}
 
