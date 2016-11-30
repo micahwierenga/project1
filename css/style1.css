@@ -1,0 +1,718 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #D3BF94;
+}
+
+header {
+	margin: 40px auto;
+	width: 80%;
+	height: 70px;
+	background-color: #2A1D15;
+	text-align: center;
+}
+
+h1 {
+	font-size: 110px;
+	font-weight: bold;
+	color: #D3BF94;
+	text-transform: uppercase;
+	line-height: 70px;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*Instructions*/
+
+.instructions {
+	background-color: #1E1713;
+	color: #D3BF94;
+	width: 300px;
+	height: 320px;
+	padding: 25px;
+}
+
+h2 {
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#modalBox {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 200px;
+	z-index: 1;
+}
+
+#modal {
+	height: 100px;
+	width: 30%;
+	background-color: #9B805A;
+	color: #1E1713;
+	font-weight: bold;
+	box-shadow: 1px 1px 5px #2A1D15;
+	border: 1px solid #2A1D15;
+	text-align: center;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+#modalButton {
+	width: 100px;
+	height: 25px;
+	border: none;
+	background-color: #1E1713;
+	color: #9B805A;
+	font-size: 12px;
+	cursor: pointer;
+	margin: 20px auto;
+}
+
+#modalButton:hover {
+	background-color: rgba(30, 23, 19, .3);
+	color: #1E1713;
+}
+
+/*Question and Answers*/
+
+#questionAnswerBox {
+	float: left;
+}
+
+.questionBox {
+	background-color: #1E1713;
+	color: #D3BF94;
+	line-height: 25px;
+	margin: 5px auto;
+	width: 300px;
+	padding: 30px 10px;
+}
+
+.answerBox {
+	background-color: #9B805A;
+	color: #1E1713;
+	width: 300px;
+	margin: 2px auto;
+	padding: 16px 10px;
+}
+
+.answerBox:hover {
+	cursor: pointer;
+	background-color: #2A1D15;
+	color: #D3BF94;
+}
+
+#turnBox {
+	width: 200px;
+	background-color: #1E1713;
+	color: #D3BF94;
+	margin: 15px auto;
+	padding: 16px 10px;
+	text-align: center;
+}
+
+#showQuestionAnswerBox {
+	float: left;
+}
+
+/*Answer Display*/
+
+.answerAndNextQuestion {
+	float: left;
+	width: 200px;
+}
+
+#answerDisplayBox {
+	margin: 5px auto 0 10px;
+}
+
+#answerDisplay {
+	height: 100px;
+	margin: 0 auto;
+	padding: 20px;
+	color: #fff;
+}
+
+#answerDisplayCorrect {
+	background-color: rgba(54, 86, 83, 1);
+	margin: 0 auto;
+	padding: 20px;
+	width: 200px;
+	color: #1E1713;
+	color: #D3BF94;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+#answerDisplayIncorrect {
+	background-color: rgba(143, 68, 38, 1);
+	margin: 0 auto;
+	width: 200px;
+	padding: 20px;
+	color: #1E1713;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+/*Next Question Button*/
+
+#nextQuestionBox {
+	height: 100px;
+	margin: 5px auto 0 10px;
+	text-align: center;
+}
+
+#nextQuestion {
+	display: none;
+}
+
+#show {
+	border: none;
+	background-color: #2A1D15;
+	color: #D3BF94;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#show:hover {
+	background-color: #9B805A;
+	color: #1E1713;
+}
+
+#nextQuestion:hover {
+	background-color: #664400;
+}
+
+/*Scoreboard*/
+
+.scoreboardBox {
+	float: right;
+	width: 200px;
+	margin: 5px auto;
+	color: #D3BF94;
+}
+
+table {
+	margin: 0 auto;
+	width: 200px;
+	height: 100px;
+	background-color: #1E1713;
+}
+
+th {
+	padding: 10px;
+	font-size: 18px;
+}
+
+#player1Score {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player1ScoreTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player1ScoreHeaderTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player1ScoreHeaderWinner {
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player1ScoreWinner {
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player2Score {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player2ScoreTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player2ScoreHeaderTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player2ScoreHeaderWinner {
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#player2ScoreWinner {
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.winner {
+	height: 40px;
+}
+
+#playerTurn {
+	background-color: #9B805A;
+	color: #1E1713;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+#showWinner {
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+/*Start Button*/
+
+.startButtonBox {
+	width: 200px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#startButton {
+	border: none;
+	background-color: #2A1D15;
+	background-color: rgba(54, 86, 83, 1);
+	color: #D3BF94;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#startButton:hover {
+	background-color: #9B805A;
+	background-color: rgba(54, 86, 83, .8);
+	color: #1E1713;
+	font-weight: bold;
+}
+
+/*Reset Button*/
+
+.resetButtonBox {
+	width: 200px;
+	margin-top: 2px;
+	text-align: center;
+}
+
+#resetButton {
+	border: none;
+	background-color: #9B805A;
+	color: #1E1713;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#resetButton:hover {
+	background-color: #2A1D15;
+	color: #D3BF94;
+}
+
+.unclickable {
+	pointer-events: none;
+	background-color: #9B805A;
+	color: #1E1713;
+	width: 300px;
+	margin: 2px auto;
+	padding: 16px 10px;
+}
+
+/*Tablet View*/
+
+@media (max-width: 875px) {
+
+	.container {
+		margin-top: 10px;
+		width: 80%;
+		position: relative;
+	}
+
+	#questionAnswerBox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200px;
+	}
+
+	.answerAndNextQuestion {
+		position: absolute;
+		top: 340px;
+		width: 300px;
+	}
+
+	#answerDisplayBox {
+		margin: 0;
+	}
+
+	#nextQuestionBox {
+		margin: 5px 0 0 0;
+	}
+
+	#answerDisplayCorrect {
+		width: 300px;
+
+	}
+
+	#answerDisplayIncorrect {
+		width: 300px;
+	}
+
+	#show {
+		width: 300px;
+	}
+
+	.scoreboardBox {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 200px;
+		color: #D3BF94;
+		margin: 0;
+	}
+	
+	.questionBox {
+		margin: 0;
+	}
+
+	#modalBox {
+		width: 100%;
+		text-align: center;
+		position: fixed;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top: 200px;
+		z-index: 1;
+	}
+
+}
+
+/*Smartphone View*/
+
+@media (max-width: 630px) {
+	
+	header {
+		margin: 20px auto;
+		width: 90%;
+		height: 30px;
+		background-color: #2A1D15;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 43px;
+		font-weight: bold;
+		color: #D3BF94;
+		text-transform: uppercase;
+		line-height: 30px;
+	}
+
+	/*Instructions*/
+
+	.instructions {
+		background-color: #1E1713;
+		color: #D3BF94;
+		width: 150px;
+		height: 270px;
+		padding: 10px;
+	}
+
+	h2 {
+		font-size: 12px;
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+	#modal {
+		height: 80px;
+		padding: 10px;
+	}
+
+	#modalButton {
+		width: 50px;
+		margin: 10px auto;
+	}
+
+	/*Questions/Answers*/
+
+	.container {
+		position: relative;
+		margin-top: 0;
+		width: 90%;
+	}
+
+	#questionAnswerBox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0 auto;
+		width: 150px;
+	}
+
+	.questionBox {
+		background-color: #1E1713;
+		color: #D3BF94;
+		line-height: 25px;
+		margin: 0 auto 5px;
+		width: 150px;
+		padding: 30px 10px;
+		font-size: 12px;
+	}
+
+	.answerBox {
+		width: 150px;
+		font-size: 12px;
+	}	
+
+	/*Answer Display and Next Question*/
+
+	.answerAndNextQuestion {
+		position: absolute;
+		top: 260px;
+		right: 0px;
+		width: 150px;
+	}
+
+	#answerDisplayBox {
+		margin: 0;
+	}
+
+	#nextQuestionBox {
+		margin: 5px 0 0 0;
+	}
+
+	#answerDisplayCorrect {
+		width: 150px;
+		font-size: 12px;
+	}
+
+	#answerDisplayIncorrect {
+		width: 150px;
+		font-size: 12px;
+	}
+
+	#show {
+		width: 150px;
+		font-size: 12px;
+	}
+
+	/*Scoreboard*/
+
+	.scoreboardBox {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 150px;
+		color: #D3BF94;
+	}
+
+	table {
+		margin: 0 auto;
+		width: 150px;
+		height: 100px;
+		background-color: #1E1713;
+	}
+
+	th {
+		padding: 10px;
+		font-size: 12px;
+	}
+
+	#player1Score {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	#player1ScoreHeaderWinner {
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	#player1ScoreWinner {
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	#player2Score {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	#player2ScoreHeaderWinner {
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	#player2ScoreWinner {
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.winner {
+		height: 30px;
+	}
+
+	#showWinner {
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		padding: 10px;
+	}
+
+	#playerTurn {
+		background-color: #9B805A;
+		color: #1E1713;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.unclickable {
+		pointer-events: none;
+		background-color: #9B805A;
+		color: #1E1713;
+		width: 150px;
+		font-size: 12px;
+		margin: 2px auto;
+		padding: 16px 10px;
+	}
+
+	/*Start Button*/
+	
+	.startButtonBox {
+		width: 150px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	#startButton {
+		border: none;
+		background-color: #2A1D15;
+		background-color: rgba(54, 86, 83, 1);
+		color: #D3BF94;
+		width: 150px;
+		height: 50px;
+		font-size: 12px;
+		cursor: pointer;
+	}
+
+	#startButton:hover {
+		background-color: #9B805A;
+		background-color: rgba(54, 86, 83, .8);
+		color: #1E1713;
+		font-weight: bold;
+	}
+
+	/*Reset Button*/
+
+	.resetButtonBox {
+		width: 150px;
+		margin-top: 2px;
+		text-align: center;
+	}
+
+	#resetButton {
+		border: none;
+		background-color: #9B805A;
+		color: #1E1713;
+		width: 150px;
+		height: 50px;
+		font-size: 12px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+}
+
+/*Landing Page*/
+
+#landingBody {
+	text-align: center;
+}
+
+#landingButton {
+	border: none;
+	background-color: #2A1D15;
+	color: #D3BF94;
+	width: 200px;
+	height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 40%;
+}
